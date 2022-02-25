@@ -80,14 +80,14 @@ public class AlfabankTestingGUI
     }
 
     @Test
-    @DisplayName("ТЕСТ 1")
+    @DisplayName("ТЕСТ-1. Негатив. Введен несуществующий номер карты без указания суммы перевода")
     public void wrongCardNumber( ) throws InterruptedException {
     // в поле ввода 1 ...
         eEntry = driver.findElement(By.xpath("/html/body/div/form/div[2]/div[1]/div[1]/div[3]/div[1]/input[2]"));
     // ... вводим значение (16-ти значный номер карты)
         eEntry.sendKeys(cardNumber1string);
         Thread.sleep(500);
-    // в полле MM/YY вводим дату
+    // в поле MM/YY вводим дату
         eEntry = driver.findElement(By.xpath("/html/body/div/form/div[2]/div[1]/div[1]/div[3]/div[2]/input"));
         eEntry.sendKeys(inputDatestring);
     // в поле CVC вводим cvc
@@ -102,7 +102,7 @@ public class AlfabankTestingGUI
     }
 
     @Test
-    @DisplayName("ТЕСТ 2")
+    @DisplayName("ТЕСТ-2. Негатив. Введен несуществующий номер карты и указана сумма перевода")
     public void c2c( ) throws InterruptedException {
 
         // в поле ввода 1 вводим значение (16-ти значный номер карты)
